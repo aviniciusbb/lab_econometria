@@ -283,7 +283,7 @@ dados_gapminder_2007 <- dados_gapminder |>
 ggplot(data = dados_gapminder_2007) +
   geom_point(
     aes(x = pib_per_capita, y = expectativa_de_vida),
-    color = "orange"
+    color = "red"
     )
 
 ```
