@@ -10,6 +10,7 @@ Esta página contém os material referentes às aulas de laboratório de Econome
 ## :arrow_forward: Slides
 
 1. [**R Básico**](https://raw.githack.com/aviniciusbb/lab_econometria/main/aula_01.html)
+2. [**Tidyverse**](https://raw.githack.com/aviniciusbb/lab_econometria/main/aula_02.html)
 
 
 ## :link: Links
