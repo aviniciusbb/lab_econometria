@@ -1,0 +1,462 @@
+---
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    footer: "Introdução à Econometria"
+    slide-number: c/t
+highlight-style: a11y
+code-link: true
+height: 900
+width: 1600
+execute: 
+  eval: true
+  echo: true
+---
+
+<h1><font color="1b5299"> Introdução à Econometria </font></h1>
+
+<hr>
+
+<h2><font color="736f72"> Lab. 1 </font> - Comandos básicos no `R`</h2>
+<h2><font color="FFFFFF"> Lab. 1 </font> </h2>
+
+<h2>Antonio Vinícius Barbosa<h2>
+
+<h3>`r format(Sys.time(), "%d-%m-%Y")`</h3>
+
+<br>
+
+<h3>
+
+![](https://www.r-project.org/logo/Rlogo.svg){.absolute top="580" left="1050" width="350"}
+
+# <font color="1b5299"> Utilizando o `RStudio` </font> {background-color="#BBDEF0"}
+
+## `RStudio`
+
+O ambiente de desenvolvimento integrado (IDE) `RStudio`:
+
+![](Images/rstudio_example.png){fig-align="center" width="700"}
+
+# <font color="1b5299"> Como o `R` funciona? </font> {background-color="#BBDEF0"}
+
+## R Básico
+
+A forma mais simples de se utilizar o `R` é através de operações básicas:
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|1-2|3-4|5-6|7-8"
+2 + 2
+sqrt(81)
+pi
+print("Olá, mundo!")
+```
+
+Neste caso, o `R` executa a operação e retorna seu valor na tela.
+
+## Operações básicas
+
+```{r, echo = TRUE, collapse = TRUE}
+# Adição
+23 + 4
+
+# Subtração
+13 - 5
+
+# Multiplição
+9 * 7
+
+# Divisão
+64/16
+
+# Exponeciação
+2^5
+
+# Raiz quadrada
+sqrt(16)
+
+# Arredondar
+round(pi, 2)
+
+# Logaritmo (base e)
+log(10)
+
+# Logaritmo (outras bases)
+log(10, 10)
+```
+
+. . .
+
+O símbolo `#` é utilizado para adicionar comentários ao código.
+
+
+## Salvando valores em objetos
+
+-   Uma **atribuição** salva o valor em um **objeto** (ou *variável*).
+-   É, normalmente, feito através do operador especial `<-`
+-   Além do operador `<-`, atribuições podem ser feitas através `=`
+
+```{r, echo = TRUE, collapse = TRUE}
+# Lados do triângulo 
+a <- 3
+b <- 4
+# Obter o tamanho da hipotenusa
+h = sqrt(a^2 + b^2)
+h
+```
+
+## Gerenciando objetos
+
+Para listar todos os objetos armazenados na memória, basta utilizar a função `ls()`
+
+```{r, echo = FALSE}
+rm(list=ls())
+```
+
+```{r, echo = TRUE, collapse = TRUE}
+# Criar objetos
+p <- pi
+e <- exp(1)
+r <- sqrt(2)
+
+# Listar objetos
+ls()
+```
+
+Para excluir ou remover um objeto, utilizamos a função `rm()`
+
+```{r, echo = TRUE, collapse = TRUE}
+rm(e)
+ls()
+```
+
+## Quizz \#1 {.inverse background-color="#386FA4"}
+
+- Crie a variável `renda_dom` para armazenar o valor da renda total aproximada do seu domicílio.
+- Agora, atribua à variável `n_pessoas` o número de pessoas que moram no seu domicílio.
+- Calcule a renda domiciliar per capita e atribua à variável `renda_pc`.
+
+```{r, echo = FALSE, collapse = TRUE}
+countdown::countdown(
+  minutes = 3
+)
+```
+
+# <font color="1b5299"> Pacotes </font> {background-color="#BBDEF0"}
+
+## Pacotes no `R`
+
+Um **pacote** é um conjunto de funções que servem para uma dada finalidade. Cada pacote possui uma documentação própria explicando sua funcionalidade e exemplos de uso.
+
+![](Images/library.jpg){fig-align="center"}
+
+## Pacotes no `R`
+
+Para instalar um pacote específico no `R`, fazemos:
+
+```{r, eval=FALSE, echo = TRUE}
+# Pacotes do repositorio oficial (CRAN)
+install.packages("dplyr")
+install.packages("remotes")
+
+# Pacotes externos
+remotes::install_github("https://github.com/ccolonescu/PoEdata")
+```
+
+
+Uma vez instalado, não é necessário reinstalar a cada uso. No entanto, para utilizar as funcionalidades de um pacote é necessário carregá-lo sempre que a sessão for iniciada:
+
+```{r, eval=FALSE, echo = TRUE}
+library(PoEdata)
+library(dplyr)
+```
+
+# <font color="1b5299"> Vetores </font> {background-color="#BBDEF0"}
+
+## Criando vetores
+
+A construção de vetores (conjunto de valores) é feito através do operador `c()`:
+
+```{r, echo = TRUE, collapse = T}
+#| code-line-numbers: "|1-4|1-8|1-12|1-16"
+# Características dos participantes
+idade <- c(19, 21, 23, 24, 25, 31, 33)
+idade
+
+sexo <- c("M", "M", "F", "F", "M", "F", "M")
+sexo
+
+aluno_econ <- c(TRUE, FALSE, FALSE, TRUE, TRUE, T, F)
+aluno_econ
+
+cra <- c(8.26, 7.18, 8.02, 7.33, 6.79, 9.45, 7.65)
+cra
+```
+
+## Classes
+
+Para determinar a classe de um vetor, utilizamos a função `class()`
+
+```{r, echo = TRUE, collapse = TRUE}
+class(idade)
+class(sexo)
+class(aluno_econ)
+class(cra)
+```
+
+As classes definem a forma de **armazenamento** na memória. Por exemplo, um vetor de números inteiros requer menos espaço de armazenamento do que os vetores numéricos.
+
+## Classes
+
+Para converter manualmente (quando possível) a classe de um vetor, utilizamos as funções `as.character()`, `as.numeric()`, `as.integer()` e `as.logical()`:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Modificando classes de vetores
+as.integer(idade)
+
+as.numeric(aluno_econ)
+
+as.character(cra)
+```
+
+## Operação com vetores
+
+Considere o vetor `cra`. Podemos fazer algumas operações básicas, tais como:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Vetor 
+cra <- c(8.26, 7.18, 8.02, 7.33, 6.79, 9.45, 7.65)
+
+# Média de cra
+mean(cra)
+
+# Variância 
+var(cra)
+```
+
+## Operação com vetores
+
+A função `summary()` apresenta um conjunto de estatísticas básicas sobre um vetor:
+
+```{r, echo = TRUE, collapse = TRUE}
+summary(cra)
+```
+
+Para obter o tamanho de um vetor, utilizamos a função `length()`:
+
+```{r, echo = TRUE, collapse = TRUE}
+length(cra)
+```
+
+## Operação com vetores
+
+Outras operações com vetores:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Valor mínimo  
+min(cra) 
+
+# Valor máximo
+max(cra)
+
+# Soma dos elementos 
+sum(cra)
+
+# Soma acumulada dos elementos 
+cumsum(cra)
+
+# Multiplicação por um escalar
+2 * cra
+```
+
+## Operação com vetores 
+
+Outras operações básicas com vetores:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Operações entre vetores 
+a <- c(1, 2, 3, 4)
+b <- c(4, 3, 2, 1)
+
+a + b
+
+a - b
+
+a * b
+```
+
+## Operação com vetores
+
+Algumas destas operações não funcionam quando existem **elementos faltantes** (representados por `NA`)
+
+```{r, echo = TRUE, collapse = TRUE}
+valores_na <- c(21, 34, NA, 17, 25)
+mean(valores_na)
+sd(valores_na)
+```
+
+Neste caso, devemos *remover* os dados faltantes da seguinte forma:
+
+```{r, echo = TRUE, collapse = TRUE}
+mean(valores_na, na.rm = TRUE)
+sd(valores_na, na.rm = T)
+```
+
+## Selecionando elementos no vetor
+
+Para selecionar um ou mais elementos de um vetor, utilizamos o operador [ ]
+
+```{r, echo = TRUE, collapse = TRUE}
+# Vetor com informacoes de receita (em mil reais)
+receita <- c(43.9, 45.4, 48.2, 51.8, 56.5)
+
+# Selecionar o primeiro elemento
+receita[1]
+
+# Selecionar uma sequência de elementos
+receita[3:5]
+```
+
+
+## Sequências
+
+O `R` possui algumas funcionalidades para gerar sequências numéricas:
+
+
+```{r, echo = TRUE, collapse = TRUE}
+# Sequencias
+1:7
+
+seq(from = 1, to = 10, by = 2)
+
+letters[1:8] 
+
+rep(2, times = 5)
+
+rep(c(6, 7), each = 3)
+```
+
+
+## Operações lógicas
+
+O `R` possui **dois** valores lógicos, `TRUE` e `FALSE`. Os operadores de comparação 
+entre dois objetos são: 
+
+- `==` &nbsp; igual  
+- `!=` &nbsp; diferente
+- `<` &nbsp; menor que
+- `>` &nbsp; maior que 
+- `<=` &nbsp; menor ou igual que
+- `>=` &nbsp; maior ou igual que
+
+
+## Operações lógicas
+
+```{r, echo = TRUE, collapse = TRUE}
+# Operacoes logicas
+4 >= 3
+
+"a" == "A"
+
+c(12, 4) != c(12, 5)
+
+4 < pi
+```
+
+
+# <font color="1b5299"> Matrizes </font> {background-color="#BBDEF0"}
+
+
+## Matrizes
+
+Uma **matriz** é simplesmente uma estruturação de vetores em linhas e colunas:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Matrizes
+mt_a <- matrix(c(2, 1, 7, 2), 2, 2)
+mt_a
+
+mt_b <- matrix(1:6, 3, 2, byrow = TRUE)
+mt_b
+```
+
+## Matrizes
+
+Os elementos de uma matriz podem ser selecionado pelo operador `[i,j]`, com `i` representando linhas e `j` representando colunas:
+
+```{r, echo = TRUE, collapse = TRUE}
+mt_a[1,2]
+
+mt_b[3,2]
+
+mt_a[1, ]
+
+mt_b[ ,2]
+```
+
+## Operações com matrizes
+
+Podemos realizar operações básicas com matrizes
+
+```{r, echo = TRUE, collapse = TRUE}
+# Produto
+mt_b %*%  mt_a
+
+# Determinante
+det(mt_a)
+
+# Matriz inversa
+solve(mt_a)
+```
+
+# <font color="1b5299"> Data frames </font> {background-color="#BBDEF0"}
+
+## Data frames
+Um **data frame** é uma das estruturas mais importantes para armazanamento de dados. Equivale, de certa forma, às *planilhas eletrônicas* com linhas e colunas. 
+
+
+* Um data frame é um conjunto de vetores de mesmo tamanho;
+* Cada **linha** representa informações para uma única unidade de observação
+* Cada **coluna** representa uma característica observada das unidades;
+* Elementos da mesma coluna devem ser do mesma classe.  
+
+![](Images/data_frame.png){fig-align="center"}
+
+
+## Data frames
+
+É possível criar, carregar (dados dos pacotes) ou ler arquivos diretamente no `R`. Para criar um data frame, fazemos:
+
+```{r, echo = TRUE, collapse = TRUE}
+alunos_ufpb <- data.frame(
+  aluno = c("José", "Maria", "Pedro", "Carla", "Isabel"),
+  economia = c(1, 0, 0, 1, 1),
+  periodo = c(3, 4, 7, 2, 3),
+  cra = c(7.34, 8.45, 8.05, 7.98, 9.03)
+  )
+
+alunos_ufpb
+```
+
+## Data frames
+
+Para carregar dados dos pacotes, fazemos:
+
+```{r, echo = TRUE, collapse = TRUE}
+#install.packages("dados")
+head(dados::dados_gapminder)
+```
+
+## Data frames
+
+Algumas características dos dados:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Estrutura dos dados
+str(dados::dados_gapminder)
+
+# Listar variaveis
+names(dados::dados_gapminder)
+```
+
+

@@ -1,0 +1,325 @@
+---
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+    footer: "Introdução à Econometria"
+    slide-number: c/t
+highlight-style: a11y
+code-link: true
+height: 900
+width: 1600
+execute: 
+  eval: true
+  echo: true
+---
+
+<h1><font color="1b5299"> Introdução à Econometria </font></h1>
+
+<hr>
+
+<h2><font color="736f72"> Lab. 2 </font> - `Tidyverse` </h2>
+<h2><font color="FFFFFF"> Lab. 2 </font> </h2>
+
+<h2>Antonio Vinícius Barbosa<h2>
+
+<h3>`r format(Sys.time(), "%d-%m-%Y")`</h3>
+
+<br>
+
+<h3>
+
+![](https://www.r-project.org/logo/Rlogo.svg){.absolute top="580" left="1050" width="350"}
+
+# <font color="1b5299"> O ambiente `tidyverse` </font> {background-color="#BBDEF0"}
+
+## Pacotes do `tidyverse`
+
+O `tidyverse` é uma coleção de pacotes que facilitam a organização e visualização de dados.
+
+::: columns
+::: {.column width="40%"}
+![](Images/tidyverse.png){fig-align="center" width="800"}
+:::
+
+::: {.column width="60%"}
+```{r, echo = TRUE, eval =  FALSE, collapse = TRUE}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+```{r, echo = FALSE, eval =  TRUE, collapse = TRUE}
+library(tidyverse)
+setwd("~/Dropbox/UFPB/Disciplinas/Graduacao/2022.1/Introducao_Econometria/Slides/")
+```
+
+Nesta aula, utilizaremos como exemplo os dados do `Gapminder`, com informações sobre países ao longo do tempo.
+:::
+:::
+
+# <font color="1b5299"> Leitura </font> {background-color="#BBDEF0"}
+
+## O pacote `readr`
+
+O pacote `readr` oferece algumas funcionalidades que facilitam a leitura de dados no formato *retangular*. As principais funções do pacote `readr` são:
+
+::: columns
+::: {.column width="40%"}
+-   `read_csv()`: arquivos separados por vírgula
+-   `read_csv2()`: arquivos separados por ponto-e-vírgula
+-   `read_delim()`: arquivos separados por qualquer delimitador
+:::
+
+::: {.column width="60%"}
+![](Images/logo_readr.png){fig-align="center" width="400" height="400"}
+:::
+:::
+
+Para ler os dados, fazemos:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Ler dados
+dados_gapminder <- readr::read_csv("dados/dados_gapminder.csv")
+```
+
+## Análise inicial dos dados
+
+Para fazer uma checagem inicial da estrutura dos dados, utilizamos a função `glimpse()`
+
+```{r, echo = TRUE, collapse = TRUE}
+# Checar dados
+glimpse(dados_gapminder)
+```
+
+# <font color="1b5299"> Manipulação </font> {background-color="#BBDEF0"}
+
+## O operador `pipe` (`|>`)
+
+-   Os operadores (`|>`) são chamados de **pipes**
+-   **Pipes** são operadores sequenciais e podem ser lidos com *"e então..."*
+
+Considere o seguinte exemplo:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Operacao usual
+sqrt(sum(9, 16))
+
+# Operacao com pipe
+c(9, 16) |> sum() |> sqrt()
+```
+
+## O operador `pipe` (`|>`)
+
+Outro exemplo:
+
+```{r, echo = TRUE, collapse = TRUE}
+# Operacao usual
+nrow(dados_gapminder)
+
+# Operacao com pipe
+dados_gapminder |> nrow()
+```
+
+## O pacote `dplyr`
+
+::: columns
+::: {.column width="70%"}
+-   O `dplyr` é um pacote bastante útil para manipular dados.
+-   Os códigos são escritos de uma maneira intuitiva e elegante.
+-   Se utilizam dos pipes para realizar operações sequenciais.
+:::
+
+::: {.column width="30%"}
+![](Images/dplyr.png){fig-align="center" width="300" height="300"}
+:::
+:::
+
+. . .
+
+As principais funções do `dplyr` são:
+
+-   `select()`: seleciona por coluna do banco de dados
+-   `filter()`: seleciona linhas baseado em seu valor
+-   `mutate()`: cria/modifica colunas baseado em colunas existentes
+-   `summarise()`: realiza operações sobre um conjunto de valores
+-   `arrange()`: reordena as linhas da base de dados
+
+## A função `select()`
+
+Utilizamos `select()` para selecionar colunas ou variáveis dos dados:
+
+![](Images/select.png){fig-align="center" width="1200" height="600"}
+
+## A função `select()`
+
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|3|"
+# Selecionar variaveis
+dados_gapminder |> 
+  select(pais, ano, populacao) |> 
+  head()
+```
+
+## A função `filter()`
+
+A função `filter()` permite selecionar observações baseado em seus valores ou em uma condição:
+
+![](Images/filter.png){fig-align="center" width="1200" height="600"}
+
+## A função `filter()`
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|4|"
+# Selecionar variaveis
+dados_gapminder |> 
+  select(pais, ano, populacao) |> 
+  filter(ano == 2007) |> 
+  head()
+```
+
+## A função `filter()`
+
+Outros exemplos com a função `filter()`:
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|4|"
+# Selecionar variaveis
+dados_gapminder |> 
+  select(pais, continente, ano, populacao) |> 
+  filter(ano == 2007, continente == "Américas") |> 
+  head()
+```
+
+## A função `mutate()`
+
+Utilizamos `mutate()` para criar ou modificar variáveis (colunas) baseado em outras variáveis do banco de dados:
+
+![](Images/mutate.png){fig-align="center" width="1200" height="600"}
+
+## A função `mutate()`
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|5|"
+# Selecionar variaveis
+dados_gapminder |> 
+  select(pais, continente, ano, populacao, pib_per_capita) |> 
+  filter(ano == 2007, continente == "Américas") |> 
+  mutate(pib = populacao * pib_per_capita) |> 
+  head()
+```
+
+## A função `arrange()`
+
+Utilizamos `mutate()` ordena a base de dados, baseada em uma ou mais variáveis:
+
+![](Images/arrange.png){fig-align="center" width="1200" height="600"}
+
+## A função `arrange()`
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|6|"
+# Selecionar variaveis
+dados_gapminder |> 
+  select(pais, continente, ano, populacao, pib_per_capita) |> 
+  filter(ano == 2007, continente == "Américas") |> 
+  mutate(pib = populacao * pib_per_capita) |> 
+  arrange(pib) |> 
+  head()
+```
+
+## A função `summarise()`
+
+A função `summarise()` realiza operações sobre um conjunto de observações, reduzindo variáveis a valores.
+
+![](Images/summarise.png){fig-align="center" width="1200" height="600"}
+
+## A função `summarise()`
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|3-7|"
+dados_gapminder |> 
+  filter(ano == 2007) |> 
+  summarise(pib_pc_min = min(pib_per_capita),
+            pib_pc_mean = mean(pib_per_capita),
+            pib_pc_mediana = median(pib_per_capita),
+            pib_pc_max = max(pib_per_capita),
+            pib_pc_dp = sd(pib_per_capita))
+```
+
+## A função `summarise()`
+
+Para calcular estatísticas para grupos específicos, utilizamos o `summarise()` juntamente com a função `group_by()`
+
+```{r, echo = TRUE, collapse = TRUE}
+#| code-line-numbers: "|3-4|"
+dados_gapminder |> 
+  filter(ano == 2007) |> 
+  group_by(continente) |> 
+  summarise(esp_vida = mean(expectativa_de_vida))
+```
+
+# <font color="1b5299"> Visualização </font> {background-color="#BBDEF0"}
+
+## O pacote `ggplot2`
+
+O pacote `ggplot2` é um dos mais elegantes e flexíveis ferramentas de visualização gráfica do `R`.
+
+![](Images/ggplot2_logo.png){fig-align="center" width="400" height="400"}
+
+-   Possui lógica semelhante ao pipe (`|>`), onde é possível adicionar camadas e informações através de um operador sequencial (`+`)
+-   Através dele, podemos definir sistematicamente quais são as **camadas** de um gráfico e como eles se interelacionam.
+
+## O pacote `ggplot2`
+
+Abaixo temos o primeiro exemplo de gráfico:
+
+```{r, echo = TRUE, collapse = TRUE, fig.align='center'}
+# Salvar dados filtrados
+dados_gapminder_2007 <- dados_gapminder |> 
+  filter(ano == 2007) 
+
+ggplot(data = dados_gapminder_2007) +
+  geom_point(aes(x = pib_per_capita, y = expectativa_de_vida))
+
+```
+
+## O pacote `ggplot2`
+
+De forma geral, existem quatro partes fundamentais para a visualização no `ggplot2`:
+
+![](Images/ggplot_basics.png){fig-align="center" width="1200" height="600"}
+
+## O pacote `ggplot2`
+
+A função `ggplot()`, a camada `data`, as variáveis através do `aes()` e a camada de geometria, especificada por `geom_xxx()`. Algumas geometrias disponíveis são:
+
+::: columns
+::: {.column width="50%"}
+- `geom_line()`
+- `geom_bar()`
+- `geom_col()`
+- `geom_histogram()`
+
+:::
+
+::: {.column width="50%"}
+- `geom_density()`
+- `geom_polygon()`
+- `geom_smooth()`
+- `geom_text()`
+:::
+:::
+
+
+## O pacote `ggplot2`
+
+Abaixo temos o primeiro exemplo de gráfico:
+
+```{r, echo = TRUE, collapse = TRUE, fig.align='center'}
+# Grafico de linhas
+dados_gapminder |> 
+  filter(pais %in% c("Argentina", "Brasil", "Chile", "Uruguai")) |> 
+  ggplot() +
+  geom_line(aes(x = ano, y = expectativa_de_vida, color = pais),
+            lwd = 1.5)
+```
