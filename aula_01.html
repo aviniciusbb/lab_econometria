@@ -394,7 +394,7 @@
 <section class="slide level2">
 
 <h1>
-<font color="1b5299"> Introdução à Econometria </font>
+<font color="1b5299"> Laboratório de Econometria </font>
 </h1>
 <hr>
 <h2>
@@ -414,15 +414,25 @@ Antonio Vinícius Barbosa
 <p><img data-src="https://www.r-project.org/logo/Rlogo.svg" class="absolute" style="top: 580px; left: 1050px; width: 350px; "></p>
 </h3></section>
 <section>
-<section id="utilizando-o-rstudio" class="title-slide slide level1 center" data-background-color="#BBDEF0">
-<h1><font color="1b5299"> Utilizando o <code>RStudio</code> </font></h1>
+<section id="ide" class="title-slide slide level1 center" data-background-color="#BBDEF0">
+<h1><font color="1b5299"> IDE </font></h1>
 
 </section>
 <section id="rstudio" class="slide level2">
 <h2><code>RStudio</code></h2>
 <p>O ambiente de desenvolvimento integrado (IDE) <code>RStudio</code>:</p>
 
-<img data-src="Images/rstudio_example.png" width="700" class="r-stretch quarto-figure-center"></section></section>
+<img data-src="Images/rstudio_example.png" width="700" class="r-stretch quarto-figure-center"></section>
+<section id="vscode" class="slide level2">
+<h2><code>VSCode</code></h2>
+<p>O ambiente de desenvolvimento integrado (IDE) <code>Positron</code>:</p>
+
+<img data-src="https://user-images.githubusercontent.com/4662568/71432979-72160c00-2717-11ea-8b32-fc06d145189e.png" width="700" class="r-stretch quarto-figure-center"></section>
+<section id="positron" class="slide level2">
+<h2><code>Positron</code></h2>
+<p>O ambiente de desenvolvimento integrado (IDE) <code>VSCode</code>:</p>
+
+<img data-src="https://cdn.prod.website-files.com/654fd3ad88635290d9845b9e/6686aaaeaa918f71adb2d060_AD_4nXdsSJi_ZPSBvmJ1FjILP70SS9zrD6UtNtDJnq0FLdNrIRhmXei2l47Ir4QdZdB64dr0fSeIeficuBml5ZSvfLHERHPyaCFhCNhSFhwddMwHXM_Nt2K6fHBDmIk6cKKDD68wM0Qk5bZkGlCMG2cMqCicYdgp.png" width="700" class="r-stretch quarto-figure-center"></section></section>
 <section>
 <section id="como-o-r-funciona" class="title-slide slide level1 center" data-background-color="#BBDEF0">
 <h1><font color="1b5299"> Como o <code>R</code> funciona? </font></h1>
@@ -446,23 +456,23 @@ Antonio Vinícius Barbosa
 <section id="operações-básicas" class="slide level2">
 <h2>Operações básicas</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Adição</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Adicao</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="dv">23</span> <span class="sc">+</span> <span class="dv">4</span></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="do">## [1] 27</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># Subtração</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># Subtracao</span></span>
 <span id="cb2-6"><a href="#cb2-6"></a><span class="dv">13</span> <span class="sc">-</span> <span class="dv">5</span></span>
 <span id="cb2-7"><a href="#cb2-7"></a><span class="do">## [1] 8</span></span>
 <span id="cb2-8"><a href="#cb2-8"></a></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># Multiplição</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># Multiplicao</span></span>
 <span id="cb2-10"><a href="#cb2-10"></a><span class="dv">9</span> <span class="sc">*</span> <span class="dv">7</span></span>
 <span id="cb2-11"><a href="#cb2-11"></a><span class="do">## [1] 63</span></span>
 <span id="cb2-12"><a href="#cb2-12"></a></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># Divisão</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># Divisao</span></span>
 <span id="cb2-14"><a href="#cb2-14"></a><span class="dv">64</span><span class="sc">/</span><span class="dv">16</span></span>
 <span id="cb2-15"><a href="#cb2-15"></a><span class="do">## [1] 4</span></span>
 <span id="cb2-16"><a href="#cb2-16"></a></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># Exponeciação</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># Exponeciacao</span></span>
 <span id="cb2-18"><a href="#cb2-18"></a><span class="dv">2</span><span class="sc">^</span><span class="dv">5</span></span>
 <span id="cb2-19"><a href="#cb2-19"></a><span class="do">## [1] 32</span></span>
 <span id="cb2-20"><a href="#cb2-20"></a></span>
@@ -532,7 +542,7 @@ Antonio Vinícius Barbosa
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_20b897e0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_0ae8409d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -608,147 +618,133 @@ Antonio Vinícius Barbosa
 </div>
 <p>As classes definem a forma de <strong>armazenamento</strong> na memória. Por exemplo, um vetor de números inteiros requer menos espaço de armazenamento do que os vetores numéricos.</p>
 </section>
-<section id="classes-1" class="slide level2">
-<h2>Classes</h2>
-<p>Para converter manualmente (quando possível) a classe de um vetor, utilizamos as funções <code>as.character()</code>, <code>as.numeric()</code>, <code>as.integer()</code> e <code>as.logical()</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Modificando classes de vetores</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">as.integer</span>(idade)</span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="do">## [1] 19 21 23 24 25 31 33</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a></span>
-<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">as.numeric</span>(aluno_econ)</span>
-<span id="cb10-6"><a href="#cb10-6"></a><span class="do">## [1] 1 0 0 1 1 1 0</span></span>
-<span id="cb10-7"><a href="#cb10-7"></a></span>
-<span id="cb10-8"><a href="#cb10-8"></a><span class="fu">as.character</span>(cra)</span>
-<span id="cb10-9"><a href="#cb10-9"></a><span class="do">## [1] "8.26" "7.18" "8.02" "7.33" "6.79" "9.45" "7.65"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
 <section id="operação-com-vetores" class="slide level2">
 <h2>Operação com vetores</h2>
 <p>Considere o vetor <code>cra</code>. Podemos fazer algumas operações básicas, tais como:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Vetor </span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>cra <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">8.26</span>, <span class="fl">7.18</span>, <span class="fl">8.02</span>, <span class="fl">7.33</span>, <span class="fl">6.79</span>, <span class="fl">9.45</span>, <span class="fl">7.65</span>)</span>
-<span id="cb11-3"><a href="#cb11-3"></a></span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="co"># Média de cra</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="fu">mean</span>(cra)</span>
-<span id="cb11-6"><a href="#cb11-6"></a><span class="do">## [1] 7.811429</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a></span>
-<span id="cb11-8"><a href="#cb11-8"></a><span class="co"># Variância </span></span>
-<span id="cb11-9"><a href="#cb11-9"></a><span class="fu">var</span>(cra)</span>
-<span id="cb11-10"><a href="#cb11-10"></a><span class="do">## [1] 0.771581</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Vetor </span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>cra <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">8.26</span>, <span class="fl">7.18</span>, <span class="fl">8.02</span>, <span class="fl">7.33</span>, <span class="fl">6.79</span>, <span class="fl">9.45</span>, <span class="fl">7.65</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co"># Média de cra</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">mean</span>(cra)</span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="do">## [1] 7.811429</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="co"># Variância </span></span>
+<span id="cb10-9"><a href="#cb10-9"></a><span class="fu">var</span>(cra)</span>
+<span id="cb10-10"><a href="#cb10-10"></a><span class="do">## [1] 0.771581</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="operação-com-vetores-1" class="slide level2">
 <h2>Operação com vetores</h2>
 <p>A função <code>summary()</code> apresenta um conjunto de estatísticas básicas sobre um vetor:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">summary</span>(cra)</span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="do">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="do">##   6.790   7.255   7.650   7.811   8.140   9.450</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">summary</span>(cra)</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="do">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="do">##   6.790   7.255   7.650   7.811   8.140   9.450</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Para obter o tamanho de um vetor, utilizamos a função <code>length()</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">length</span>(cra)</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="do">## [1] 7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">length</span>(cra)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="do">## [1] 7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="operação-com-vetores-2" class="slide level2">
 <h2>Operação com vetores</h2>
 <p>Outras operações com vetores:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Valor mínimo  </span></span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">min</span>(cra) </span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="do">## [1] 6.79</span></span>
-<span id="cb14-4"><a href="#cb14-4"></a></span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="co"># Valor máximo</span></span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="fu">max</span>(cra)</span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="do">## [1] 9.45</span></span>
-<span id="cb14-8"><a href="#cb14-8"></a></span>
-<span id="cb14-9"><a href="#cb14-9"></a><span class="co"># Soma dos elementos </span></span>
-<span id="cb14-10"><a href="#cb14-10"></a><span class="fu">sum</span>(cra)</span>
-<span id="cb14-11"><a href="#cb14-11"></a><span class="do">## [1] 54.68</span></span>
-<span id="cb14-12"><a href="#cb14-12"></a></span>
-<span id="cb14-13"><a href="#cb14-13"></a><span class="co"># Soma acumulada dos elementos </span></span>
-<span id="cb14-14"><a href="#cb14-14"></a><span class="fu">cumsum</span>(cra)</span>
-<span id="cb14-15"><a href="#cb14-15"></a><span class="do">## [1]  8.26 15.44 23.46 30.79 37.58 47.03 54.68</span></span>
-<span id="cb14-16"><a href="#cb14-16"></a></span>
-<span id="cb14-17"><a href="#cb14-17"></a><span class="co"># Multiplicação por um escalar</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a><span class="dv">2</span> <span class="sc">*</span> cra</span>
-<span id="cb14-19"><a href="#cb14-19"></a><span class="do">## [1] 16.52 14.36 16.04 14.66 13.58 18.90 15.30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Valor mínimo  </span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">min</span>(cra) </span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="do">## [1] 6.79</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co"># Valor máximo</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="fu">max</span>(cra)</span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="do">## [1] 9.45</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a></span>
+<span id="cb13-9"><a href="#cb13-9"></a><span class="co"># Soma dos elementos </span></span>
+<span id="cb13-10"><a href="#cb13-10"></a><span class="fu">sum</span>(cra)</span>
+<span id="cb13-11"><a href="#cb13-11"></a><span class="do">## [1] 54.68</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a></span>
+<span id="cb13-13"><a href="#cb13-13"></a><span class="co"># Soma acumulada dos elementos </span></span>
+<span id="cb13-14"><a href="#cb13-14"></a><span class="fu">cumsum</span>(cra)</span>
+<span id="cb13-15"><a href="#cb13-15"></a><span class="do">## [1]  8.26 15.44 23.46 30.79 37.58 47.03 54.68</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a></span>
+<span id="cb13-17"><a href="#cb13-17"></a><span class="co"># Multiplicação por um escalar</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a><span class="dv">2</span> <span class="sc">*</span> cra</span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="do">## [1] 16.52 14.36 16.04 14.66 13.58 18.90 15.30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="operação-com-vetores-3" class="slide level2">
 <h2>Operação com vetores</h2>
 <p>Outras operações básicas com vetores:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Operações entre vetores </span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
-<span id="cb15-3"><a href="#cb15-3"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb15-4"><a href="#cb15-4"></a></span>
-<span id="cb15-5"><a href="#cb15-5"></a>a <span class="sc">+</span> b</span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="do">## [1] 5 5 5 5</span></span>
-<span id="cb15-7"><a href="#cb15-7"></a></span>
-<span id="cb15-8"><a href="#cb15-8"></a>a <span class="sc">-</span> b</span>
-<span id="cb15-9"><a href="#cb15-9"></a><span class="do">## [1] -3 -1  1  3</span></span>
-<span id="cb15-10"><a href="#cb15-10"></a></span>
-<span id="cb15-11"><a href="#cb15-11"></a>a <span class="sc">*</span> b</span>
-<span id="cb15-12"><a href="#cb15-12"></a><span class="do">## [1] 4 6 6 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Operações entre vetores </span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb14-3"><a href="#cb14-3"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb14-4"><a href="#cb14-4"></a></span>
+<span id="cb14-5"><a href="#cb14-5"></a>a <span class="sc">+</span> b</span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="do">## [1] 5 5 5 5</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a></span>
+<span id="cb14-8"><a href="#cb14-8"></a>a <span class="sc">-</span> b</span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="do">## [1] -3 -1  1  3</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a>a <span class="sc">*</span> b</span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="do">## [1] 4 6 6 4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="operação-com-vetores-4" class="slide level2">
 <h2>Operação com vetores</h2>
 <p>Algumas destas operações não funcionam quando existem <strong>elementos faltantes</strong> (representados por <code>NA</code>)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>valores_na <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">34</span>, <span class="cn">NA</span>, <span class="dv">17</span>, <span class="dv">25</span>)</span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">mean</span>(valores_na)</span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="do">## [1] NA</span></span>
-<span id="cb16-4"><a href="#cb16-4"></a><span class="fu">sd</span>(valores_na)</span>
-<span id="cb16-5"><a href="#cb16-5"></a><span class="do">## [1] NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>valores_na <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">34</span>, <span class="cn">NA</span>, <span class="dv">17</span>, <span class="dv">25</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">mean</span>(valores_na)</span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="do">## [1] NA</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="fu">sd</span>(valores_na)</span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="do">## [1] NA</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Neste caso, devemos <em>remover</em> os dados faltantes da seguinte forma:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">mean</span>(valores_na, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="do">## [1] 24.25</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="fu">sd</span>(valores_na, <span class="at">na.rm =</span> T)</span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="do">## [1] 7.274384</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">mean</span>(valores_na, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="do">## [1] 24.25</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">sd</span>(valores_na, <span class="at">na.rm =</span> T)</span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="do">## [1] 7.274384</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="selecionando-elementos-no-vetor" class="slide level2">
 <h2>Selecionando elementos no vetor</h2>
 <p>Para selecionar um ou mais elementos de um vetor, utilizamos o operador [ ]</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># Vetor com informacoes de receita (em mil reais)</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>receita <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">43.9</span>, <span class="fl">45.4</span>, <span class="fl">48.2</span>, <span class="fl">51.8</span>, <span class="fl">56.5</span>)</span>
-<span id="cb18-3"><a href="#cb18-3"></a></span>
-<span id="cb18-4"><a href="#cb18-4"></a><span class="co"># Selecionar o primeiro elemento</span></span>
-<span id="cb18-5"><a href="#cb18-5"></a>receita[<span class="dv">1</span>]</span>
-<span id="cb18-6"><a href="#cb18-6"></a><span class="do">## [1] 43.9</span></span>
-<span id="cb18-7"><a href="#cb18-7"></a></span>
-<span id="cb18-8"><a href="#cb18-8"></a><span class="co"># Selecionar uma sequência de elementos</span></span>
-<span id="cb18-9"><a href="#cb18-9"></a>receita[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>]</span>
-<span id="cb18-10"><a href="#cb18-10"></a><span class="do">## [1] 48.2 51.8 56.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Vetor com informacoes de receita (em mil reais)</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>receita <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">43.9</span>, <span class="fl">45.4</span>, <span class="fl">48.2</span>, <span class="fl">51.8</span>, <span class="fl">56.5</span>)</span>
+<span id="cb17-3"><a href="#cb17-3"></a></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="co"># Selecionar o primeiro elemento</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a>receita[<span class="dv">1</span>]</span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="do">## [1] 43.9</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a></span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="co"># Selecionar uma sequência de elementos</span></span>
+<span id="cb17-9"><a href="#cb17-9"></a>receita[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb17-10"><a href="#cb17-10"></a><span class="do">## [1] 48.2 51.8 56.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>No <code>R</code>, o indexador dos elementos começa em 1.</p>
 </section>
 <section id="sequências" class="slide level2">
 <h2>Sequências</h2>
 <p>O <code>R</code> possui algumas funcionalidades para gerar sequências numéricas:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Sequencias</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">7</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="do">## [1] 1 2 3 4 5 6 7</span></span>
-<span id="cb19-4"><a href="#cb19-4"></a></span>
-<span id="cb19-5"><a href="#cb19-5"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
-<span id="cb19-6"><a href="#cb19-6"></a><span class="do">## [1] 1 3 5 7 9</span></span>
-<span id="cb19-7"><a href="#cb19-7"></a></span>
-<span id="cb19-8"><a href="#cb19-8"></a>letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>] </span>
-<span id="cb19-9"><a href="#cb19-9"></a><span class="do">## [1] "a" "b" "c" "d" "e" "f" "g" "h"</span></span>
-<span id="cb19-10"><a href="#cb19-10"></a></span>
-<span id="cb19-11"><a href="#cb19-11"></a><span class="fu">rep</span>(<span class="dv">2</span>, <span class="at">times =</span> <span class="dv">5</span>)</span>
-<span id="cb19-12"><a href="#cb19-12"></a><span class="do">## [1] 2 2 2 2 2</span></span>
-<span id="cb19-13"><a href="#cb19-13"></a></span>
-<span id="cb19-14"><a href="#cb19-14"></a><span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">7</span>), <span class="at">each =</span> <span class="dv">3</span>)</span>
-<span id="cb19-15"><a href="#cb19-15"></a><span class="do">## [1] 6 6 6 7 7 7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># Sequencias</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">7</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="do">## [1] 1 2 3 4 5 6 7</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">2</span>)</span>
+<span id="cb18-6"><a href="#cb18-6"></a><span class="do">## [1] 1 3 5 7 9</span></span>
+<span id="cb18-7"><a href="#cb18-7"></a></span>
+<span id="cb18-8"><a href="#cb18-8"></a>letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>] </span>
+<span id="cb18-9"><a href="#cb18-9"></a><span class="do">## [1] "a" "b" "c" "d" "e" "f" "g" "h"</span></span>
+<span id="cb18-10"><a href="#cb18-10"></a></span>
+<span id="cb18-11"><a href="#cb18-11"></a><span class="fu">rep</span>(<span class="dv">2</span>, <span class="at">times =</span> <span class="dv">5</span>)</span>
+<span id="cb18-12"><a href="#cb18-12"></a><span class="do">## [1] 2 2 2 2 2</span></span>
+<span id="cb18-13"><a href="#cb18-13"></a></span>
+<span id="cb18-14"><a href="#cb18-14"></a><span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">7</span>), <span class="at">each =</span> <span class="dv">3</span>)</span>
+<span id="cb18-15"><a href="#cb18-15"></a><span class="do">## [1] 6 6 6 7 7 7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="operações-lógicas" class="slide level2">
@@ -767,18 +763,18 @@ Antonio Vinícius Barbosa
 <section id="operações-lógicas-1" class="slide level2">
 <h2>Operações lógicas</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Operacoes logicas</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="dv">4</span> <span class="sc">&gt;=</span> <span class="dv">3</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a><span class="do">## [1] TRUE</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a></span>
-<span id="cb20-5"><a href="#cb20-5"></a><span class="st">"a"</span> <span class="sc">==</span> <span class="st">"A"</span></span>
-<span id="cb20-6"><a href="#cb20-6"></a><span class="do">## [1] FALSE</span></span>
-<span id="cb20-7"><a href="#cb20-7"></a></span>
-<span id="cb20-8"><a href="#cb20-8"></a><span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">4</span>) <span class="sc">!=</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">5</span>)</span>
-<span id="cb20-9"><a href="#cb20-9"></a><span class="do">## [1] FALSE  TRUE</span></span>
-<span id="cb20-10"><a href="#cb20-10"></a></span>
-<span id="cb20-11"><a href="#cb20-11"></a><span class="dv">4</span> <span class="sc">&lt;</span> pi</span>
-<span id="cb20-12"><a href="#cb20-12"></a><span class="do">## [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Operacoes logicas</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="dv">4</span> <span class="sc">&gt;=</span> <span class="dv">3</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="do">## [1] TRUE</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a></span>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="st">"a"</span> <span class="sc">==</span> <span class="st">"A"</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="do">## [1] FALSE</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a></span>
+<span id="cb19-8"><a href="#cb19-8"></a><span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">4</span>) <span class="sc">!=</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">5</span>)</span>
+<span id="cb19-9"><a href="#cb19-9"></a><span class="do">## [1] FALSE  TRUE</span></span>
+<span id="cb19-10"><a href="#cb19-10"></a></span>
+<span id="cb19-11"><a href="#cb19-11"></a><span class="dv">4</span> <span class="sc">&lt;</span> pi</span>
+<span id="cb19-12"><a href="#cb19-12"></a><span class="do">## [1] FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -790,58 +786,60 @@ Antonio Vinícius Barbosa
 <h2>Matrizes</h2>
 <p>Uma <strong>matriz</strong> é simplesmente uma estruturação de vetores em linhas e colunas:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Matrizes</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a>mt_a <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>), <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb21-3"><a href="#cb21-3"></a>mt_a</span>
-<span id="cb21-4"><a href="#cb21-4"></a><span class="do">##      [,1] [,2]</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a><span class="do">## [1,]    2    7</span></span>
-<span id="cb21-6"><a href="#cb21-6"></a><span class="do">## [2,]    1    2</span></span>
-<span id="cb21-7"><a href="#cb21-7"></a></span>
-<span id="cb21-8"><a href="#cb21-8"></a>mt_b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb21-9"><a href="#cb21-9"></a>mt_b</span>
-<span id="cb21-10"><a href="#cb21-10"></a><span class="do">##      [,1] [,2]</span></span>
-<span id="cb21-11"><a href="#cb21-11"></a><span class="do">## [1,]    1    2</span></span>
-<span id="cb21-12"><a href="#cb21-12"></a><span class="do">## [2,]    3    4</span></span>
-<span id="cb21-13"><a href="#cb21-13"></a><span class="do">## [3,]    5    6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Matrizes</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>mt_a <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">2</span>), </span>
+<span id="cb20-3"><a href="#cb20-3"></a>               <span class="at">nrow =</span> <span class="dv">2</span>, </span>
+<span id="cb20-4"><a href="#cb20-4"></a>               <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb20-5"><a href="#cb20-5"></a>mt_a</span>
+<span id="cb20-6"><a href="#cb20-6"></a><span class="do">##      [,1] [,2]</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a><span class="do">## [1,]    2    7</span></span>
+<span id="cb20-8"><a href="#cb20-8"></a><span class="do">## [2,]    1    2</span></span>
+<span id="cb20-9"><a href="#cb20-9"></a></span>
+<span id="cb20-10"><a href="#cb20-10"></a>mt_b <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb20-11"><a href="#cb20-11"></a>mt_b</span>
+<span id="cb20-12"><a href="#cb20-12"></a><span class="do">##      [,1] [,2]</span></span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="do">## [1,]    1    2</span></span>
+<span id="cb20-14"><a href="#cb20-14"></a><span class="do">## [2,]    3    4</span></span>
+<span id="cb20-15"><a href="#cb20-15"></a><span class="do">## [3,]    5    6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="matrizes-2" class="slide level2">
 <h2>Matrizes</h2>
 <p>Os elementos de uma matriz podem ser selecionado pelo operador <code>[i,j]</code>, com <code>i</code> representando linhas e <code>j</code> representando colunas:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>mt_a[<span class="dv">1</span>,<span class="dv">2</span>]</span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="do">## [1] 7</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a></span>
-<span id="cb22-4"><a href="#cb22-4"></a>mt_b[<span class="dv">3</span>,<span class="dv">2</span>]</span>
-<span id="cb22-5"><a href="#cb22-5"></a><span class="do">## [1] 6</span></span>
-<span id="cb22-6"><a href="#cb22-6"></a></span>
-<span id="cb22-7"><a href="#cb22-7"></a>mt_a[<span class="dv">1</span>, ]</span>
-<span id="cb22-8"><a href="#cb22-8"></a><span class="do">## [1] 2 7</span></span>
-<span id="cb22-9"><a href="#cb22-9"></a></span>
-<span id="cb22-10"><a href="#cb22-10"></a>mt_b[ ,<span class="dv">2</span>]</span>
-<span id="cb22-11"><a href="#cb22-11"></a><span class="do">## [1] 2 4 6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>mt_a[<span class="dv">1</span>,<span class="dv">2</span>]</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="do">## [1] 7</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a></span>
+<span id="cb21-4"><a href="#cb21-4"></a>mt_b[<span class="dv">3</span>,<span class="dv">2</span>]</span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="do">## [1] 6</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a></span>
+<span id="cb21-7"><a href="#cb21-7"></a>mt_a[<span class="dv">1</span>, ]</span>
+<span id="cb21-8"><a href="#cb21-8"></a><span class="do">## [1] 2 7</span></span>
+<span id="cb21-9"><a href="#cb21-9"></a></span>
+<span id="cb21-10"><a href="#cb21-10"></a>mt_b[ ,<span class="dv">2</span>]</span>
+<span id="cb21-11"><a href="#cb21-11"></a><span class="do">## [1] 2 4 6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="operações-com-matrizes" class="slide level2">
 <h2>Operações com matrizes</h2>
 <p>Podemos realizar operações básicas com matrizes</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Produto</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a>mt_b <span class="sc">%*%</span>  mt_a</span>
-<span id="cb23-3"><a href="#cb23-3"></a><span class="do">##      [,1] [,2]</span></span>
-<span id="cb23-4"><a href="#cb23-4"></a><span class="do">## [1,]    4   11</span></span>
-<span id="cb23-5"><a href="#cb23-5"></a><span class="do">## [2,]   10   29</span></span>
-<span id="cb23-6"><a href="#cb23-6"></a><span class="do">## [3,]   16   47</span></span>
-<span id="cb23-7"><a href="#cb23-7"></a></span>
-<span id="cb23-8"><a href="#cb23-8"></a><span class="co"># Determinante</span></span>
-<span id="cb23-9"><a href="#cb23-9"></a><span class="fu">det</span>(mt_a)</span>
-<span id="cb23-10"><a href="#cb23-10"></a><span class="do">## [1] -3</span></span>
-<span id="cb23-11"><a href="#cb23-11"></a></span>
-<span id="cb23-12"><a href="#cb23-12"></a><span class="co"># Matriz inversa</span></span>
-<span id="cb23-13"><a href="#cb23-13"></a><span class="fu">solve</span>(mt_a)</span>
-<span id="cb23-14"><a href="#cb23-14"></a><span class="do">##            [,1]       [,2]</span></span>
-<span id="cb23-15"><a href="#cb23-15"></a><span class="do">## [1,] -0.6666667  2.3333333</span></span>
-<span id="cb23-16"><a href="#cb23-16"></a><span class="do">## [2,]  0.3333333 -0.6666667</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># Produto</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a>mt_b <span class="sc">%*%</span>  mt_a</span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="do">##      [,1] [,2]</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="do">## [1,]    4   11</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="do">## [2,]   10   29</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a><span class="do">## [3,]   16   47</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a></span>
+<span id="cb22-8"><a href="#cb22-8"></a><span class="co"># Determinante</span></span>
+<span id="cb22-9"><a href="#cb22-9"></a><span class="fu">det</span>(mt_a)</span>
+<span id="cb22-10"><a href="#cb22-10"></a><span class="do">## [1] -3</span></span>
+<span id="cb22-11"><a href="#cb22-11"></a></span>
+<span id="cb22-12"><a href="#cb22-12"></a><span class="co"># Matriz inversa</span></span>
+<span id="cb22-13"><a href="#cb22-13"></a><span class="fu">solve</span>(mt_a)</span>
+<span id="cb22-14"><a href="#cb22-14"></a><span class="do">##            [,1]       [,2]</span></span>
+<span id="cb22-15"><a href="#cb22-15"></a><span class="do">## [1,] -0.6666667  2.3333333</span></span>
+<span id="cb22-16"><a href="#cb22-16"></a><span class="do">## [2,]  0.3333333 -0.6666667</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -864,60 +862,60 @@ Antonio Vinícius Barbosa
 <h2>Data frames</h2>
 <p>É possível criar, carregar (dados dos pacotes) ou ler arquivos diretamente no <code>R</code>. Para criar um data frame, fazemos:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>alunos_ufpb <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb24-2"><a href="#cb24-2"></a>  <span class="at">aluno =</span> <span class="fu">c</span>(<span class="st">"José"</span>, <span class="st">"Maria"</span>, <span class="st">"Pedro"</span>, <span class="st">"Carla"</span>, <span class="st">"Isabel"</span>),</span>
-<span id="cb24-3"><a href="#cb24-3"></a>  <span class="at">economia =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
-<span id="cb24-4"><a href="#cb24-4"></a>  <span class="at">periodo =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb24-5"><a href="#cb24-5"></a>  <span class="at">cra =</span> <span class="fu">c</span>(<span class="fl">7.34</span>, <span class="fl">8.45</span>, <span class="fl">8.05</span>, <span class="fl">7.98</span>, <span class="fl">9.03</span>)</span>
-<span id="cb24-6"><a href="#cb24-6"></a>  )</span>
-<span id="cb24-7"><a href="#cb24-7"></a></span>
-<span id="cb24-8"><a href="#cb24-8"></a>alunos_ufpb</span>
-<span id="cb24-9"><a href="#cb24-9"></a><span class="do">##    aluno economia periodo  cra</span></span>
-<span id="cb24-10"><a href="#cb24-10"></a><span class="do">## 1   José        1       3 7.34</span></span>
-<span id="cb24-11"><a href="#cb24-11"></a><span class="do">## 2  Maria        0       4 8.45</span></span>
-<span id="cb24-12"><a href="#cb24-12"></a><span class="do">## 3  Pedro        0       7 8.05</span></span>
-<span id="cb24-13"><a href="#cb24-13"></a><span class="do">## 4  Carla        1       2 7.98</span></span>
-<span id="cb24-14"><a href="#cb24-14"></a><span class="do">## 5 Isabel        1       3 9.03</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>alunos_ufpb <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="at">aluno =</span> <span class="fu">c</span>(<span class="st">"José"</span>, <span class="st">"Maria"</span>, <span class="st">"Pedro"</span>, <span class="st">"Carla"</span>, <span class="st">"Isabel"</span>),</span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="at">economia =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb23-4"><a href="#cb23-4"></a>  <span class="at">periodo =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb23-5"><a href="#cb23-5"></a>  <span class="at">cra =</span> <span class="fu">c</span>(<span class="fl">7.34</span>, <span class="fl">8.45</span>, <span class="fl">8.05</span>, <span class="fl">7.98</span>, <span class="fl">9.03</span>)</span>
+<span id="cb23-6"><a href="#cb23-6"></a>  )</span>
+<span id="cb23-7"><a href="#cb23-7"></a></span>
+<span id="cb23-8"><a href="#cb23-8"></a>alunos_ufpb</span>
+<span id="cb23-9"><a href="#cb23-9"></a><span class="do">##    aluno economia periodo  cra</span></span>
+<span id="cb23-10"><a href="#cb23-10"></a><span class="do">## 1   José        1       3 7.34</span></span>
+<span id="cb23-11"><a href="#cb23-11"></a><span class="do">## 2  Maria        0       4 8.45</span></span>
+<span id="cb23-12"><a href="#cb23-12"></a><span class="do">## 3  Pedro        0       7 8.05</span></span>
+<span id="cb23-13"><a href="#cb23-13"></a><span class="do">## 4  Carla        1       2 7.98</span></span>
+<span id="cb23-14"><a href="#cb23-14"></a><span class="do">## 5 Isabel        1       3 9.03</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="data-frames-3" class="slide level2">
 <h2>Data frames</h2>
 <p>Para carregar dados dos pacotes, fazemos:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co">#install.packages("dados")</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">head</span>(dados<span class="sc">::</span>dados_gapminder)</span>
-<span id="cb25-3"><a href="#cb25-3"></a><span class="do">## # A tibble: 6 × 6</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a><span class="do">##   pais        continente   ano expectativa_de_vida populacao pib_per_capita</span></span>
-<span id="cb25-5"><a href="#cb25-5"></a><span class="do">##   &lt;fct&gt;       &lt;fct&gt;      &lt;int&gt;               &lt;dbl&gt;     &lt;int&gt;          &lt;dbl&gt;</span></span>
-<span id="cb25-6"><a href="#cb25-6"></a><span class="do">## 1 Afeganistão Ásia        1952                28.8   8425333           779.</span></span>
-<span id="cb25-7"><a href="#cb25-7"></a><span class="do">## 2 Afeganistão Ásia        1957                30.3   9240934           821.</span></span>
-<span id="cb25-8"><a href="#cb25-8"></a><span class="do">## 3 Afeganistão Ásia        1962                32.0  10267083           853.</span></span>
-<span id="cb25-9"><a href="#cb25-9"></a><span class="do">## 4 Afeganistão Ásia        1967                34.0  11537966           836.</span></span>
-<span id="cb25-10"><a href="#cb25-10"></a><span class="do">## 5 Afeganistão Ásia        1972                36.1  13079460           740.</span></span>
-<span id="cb25-11"><a href="#cb25-11"></a><span class="do">## 6 Afeganistão Ásia        1977                38.4  14880372           786.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">#install.packages("dados")</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="fu">head</span>(dados<span class="sc">::</span>dados_gapminder)</span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="do">## # A tibble: 6 × 6</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a><span class="do">##   pais        continente   ano expectativa_de_vida populacao pib_per_capita</span></span>
+<span id="cb24-5"><a href="#cb24-5"></a><span class="do">##   &lt;fct&gt;       &lt;fct&gt;      &lt;int&gt;               &lt;dbl&gt;     &lt;int&gt;          &lt;dbl&gt;</span></span>
+<span id="cb24-6"><a href="#cb24-6"></a><span class="do">## 1 Afeganistão Ásia        1952                28.8   8425333           779.</span></span>
+<span id="cb24-7"><a href="#cb24-7"></a><span class="do">## 2 Afeganistão Ásia        1957                30.3   9240934           821.</span></span>
+<span id="cb24-8"><a href="#cb24-8"></a><span class="do">## 3 Afeganistão Ásia        1962                32.0  10267083           853.</span></span>
+<span id="cb24-9"><a href="#cb24-9"></a><span class="do">## 4 Afeganistão Ásia        1967                34.0  11537966           836.</span></span>
+<span id="cb24-10"><a href="#cb24-10"></a><span class="do">## 5 Afeganistão Ásia        1972                36.1  13079460           740.</span></span>
+<span id="cb24-11"><a href="#cb24-11"></a><span class="do">## 6 Afeganistão Ásia        1977                38.4  14880372           786.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="data-frames-4" class="slide level2">
 <h2>Data frames</h2>
 <p>Algumas características dos dados:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># Estrutura dos dados</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">str</span>(dados<span class="sc">::</span>dados_gapminder)</span>
-<span id="cb26-3"><a href="#cb26-3"></a><span class="do">## tibble [1,704 × 6] (S3: tbl_df/tbl/data.frame)</span></span>
-<span id="cb26-4"><a href="#cb26-4"></a><span class="do">##  $ pais               : Factor w/ 142 levels "Afeganistão",..: 1 1 1 1 1 1 1 1 1 1 ...</span></span>
-<span id="cb26-5"><a href="#cb26-5"></a><span class="do">##  $ continente         : Factor w/ 5 levels "África","Américas",..: 3 3 3 3 3 3 3 3 3 3 ...</span></span>
-<span id="cb26-6"><a href="#cb26-6"></a><span class="do">##  $ ano                : int [1:1704] 1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 ...</span></span>
-<span id="cb26-7"><a href="#cb26-7"></a><span class="do">##  $ expectativa_de_vida: num [1:1704] 28.8 30.3 32 34 36.1 ...</span></span>
-<span id="cb26-8"><a href="#cb26-8"></a><span class="do">##  $ populacao          : int [1:1704] 8425333 9240934 10267083 11537966 13079460 14880372 12881816 13867957 16317921 22227415 ...</span></span>
-<span id="cb26-9"><a href="#cb26-9"></a><span class="do">##  $ pib_per_capita     : num [1:1704] 779 821 853 836 740 ...</span></span>
-<span id="cb26-10"><a href="#cb26-10"></a></span>
-<span id="cb26-11"><a href="#cb26-11"></a><span class="co"># Listar variaveis</span></span>
-<span id="cb26-12"><a href="#cb26-12"></a><span class="fu">names</span>(dados<span class="sc">::</span>dados_gapminder)</span>
-<span id="cb26-13"><a href="#cb26-13"></a><span class="do">## [1] "pais"                "continente"          "ano"                </span></span>
-<span id="cb26-14"><a href="#cb26-14"></a><span class="do">## [4] "expectativa_de_vida" "populacao"           "pib_per_capita"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># Estrutura dos dados</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">str</span>(dados<span class="sc">::</span>dados_gapminder)</span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="do">## tibble [1,704 × 6] (S3: tbl_df/tbl/data.frame)</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="do">##  $ pais               : Factor w/ 142 levels "Afeganistão",..: 1 1 1 1 1 1 1 1 1 1 ...</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a><span class="do">##  $ continente         : Factor w/ 5 levels "África","Américas",..: 3 3 3 3 3 3 3 3 3 3 ...</span></span>
+<span id="cb25-6"><a href="#cb25-6"></a><span class="do">##  $ ano                : int [1:1704] 1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 ...</span></span>
+<span id="cb25-7"><a href="#cb25-7"></a><span class="do">##  $ expectativa_de_vida: num [1:1704] 28.8 30.3 32 34 36.1 ...</span></span>
+<span id="cb25-8"><a href="#cb25-8"></a><span class="do">##  $ populacao          : int [1:1704] 8425333 9240934 10267083 11537966 13079460 14880372 12881816 13867957 16317921 22227415 ...</span></span>
+<span id="cb25-9"><a href="#cb25-9"></a><span class="do">##  $ pib_per_capita     : num [1:1704] 779 821 853 836 740 ...</span></span>
+<span id="cb25-10"><a href="#cb25-10"></a></span>
+<span id="cb25-11"><a href="#cb25-11"></a><span class="co"># Listar variaveis</span></span>
+<span id="cb25-12"><a href="#cb25-12"></a><span class="fu">names</span>(dados<span class="sc">::</span>dados_gapminder)</span>
+<span id="cb25-13"><a href="#cb25-13"></a><span class="do">## [1] "pais"                "continente"          "ano"                </span></span>
+<span id="cb25-14"><a href="#cb25-14"></a><span class="do">## [4] "expectativa_de_vida" "populacao"           "pib_per_capita"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="footer footer-default">
-<p>Introdução à Econometria</p>
+<p>Lab. Econometria</p>
 </div>
 </section></section>
     </div>

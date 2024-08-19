@@ -392,7 +392,7 @@
 <section class="slide level2">
 
 <h1>
-<font color="1b5299"> Introdução à Econometria </font>
+<font color="1b5299"> Laboratório de Econometria </font>
 </h1>
 <hr>
 <h2>
@@ -747,11 +747,22 @@ Antonio Vinícius Barbosa
 <span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">filter</span>(ano <span class="sc">==</span> <span class="dv">2007</span>) </span>
 <span id="cb13-4"><a href="#cb13-4"></a></span>
 <span id="cb13-5"><a href="#cb13-5"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dados_gapminder_2007) <span class="sc">+</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> pib_per_capita, <span class="at">y =</span> expectativa_de_vida))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
+<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="fu">aes</span>(<span class="at">x =</span> pib_per_capita, <span class="at">y =</span> expectativa_de_vida),</span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="at">color =</span> <span class="st">"orange"</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="aula_02_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="o-pacote-ggplot2-2" class="slide level2">
+
+</section>
+<section id="o-pacote-ggplot2-1-output" class="slide level2 output-location-slide"><h2>O pacote <code>ggplot2</code></h2><div class="cell output-location-slide" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="aula_02_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div></section><section id="o-pacote-ggplot2-2" class="slide level2">
 <h2>O pacote <code>ggplot2</code></h2>
 <p>De forma geral, existem quatro partes fundamentais para a visualização no <code>ggplot2</code>:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -789,14 +800,25 @@ Antonio Vinícius Barbosa
 <span id="cb14-2"><a href="#cb14-2"></a>dados_gapminder <span class="sc">|&gt;</span> </span>
 <span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">filter</span>(pais <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Argentina"</span>, <span class="st">"Brasil"</span>, <span class="st">"Chile"</span>, <span class="st">"Uruguai"</span>)) <span class="sc">|&gt;</span> </span>
 <span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> ano, <span class="at">y =</span> expectativa_de_vida, <span class="at">color =</span> pais),</span>
-<span id="cb14-6"><a href="#cb14-6"></a>            <span class="at">lwd =</span> <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">geom_line</span>(</span>
+<span id="cb14-6"><a href="#cb14-6"></a>    <span class="fu">aes</span>(<span class="at">x =</span> ano, <span class="at">y =</span> expectativa_de_vida, <span class="at">color =</span> pais),</span>
+<span id="cb14-7"><a href="#cb14-7"></a>    <span class="at">lwd =</span> <span class="fl">1.5</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>    ) <span class="sc">+</span> </span>
+<span id="cb14-9"><a href="#cb14-9"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
+<div class="footer footer-default">
+<p>Lab. Econometria</p>
 </div>
-<img data-src="aula_02_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch quarto-figure-center"><div class="footer footer-default">
-<p>Introdução à Econometria</p>
+</section><section id="o-pacote-ggplot2-4-output" class="slide level2 output-location-slide"><h2>O pacote <code>ggplot2</code></h2><div class="cell output-location-slide" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="aula_02_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+</figure>
 </div>
-</section></section>
+</div>
+</div></section></section>
     </div>
   </div>
 

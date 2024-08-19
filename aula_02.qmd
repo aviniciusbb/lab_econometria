@@ -2,7 +2,7 @@
 format:
   revealjs: 
     theme: [default, custom.scss]
-    footer: "Introdução à Econometria"
+    footer: "Lab. Econometria"
     slide-number: c/t
 highlight-style: a11y
 code-link: true
@@ -13,7 +13,7 @@ execute:
   echo: true
 ---
 
-<h1><font color="1b5299"> Introdução à Econometria </font></h1>
+<h1><font color="1b5299"> Laboratório de Econometria </font></h1>
 
 <hr>
 
@@ -273,13 +273,18 @@ O pacote `ggplot2` é um dos mais elegantes e flexíveis ferramentas de visualiz
 
 Abaixo temos o primeiro exemplo de gráfico:
 
-```{r, echo = TRUE, collapse = TRUE, fig.align='center'}
+```{r, echo = TRUE}
+#| output-location: slide
+#| fig-align: center
 # Salvar dados filtrados
 dados_gapminder_2007 <- dados_gapminder |> 
   filter(ano == 2007) 
 
 ggplot(data = dados_gapminder_2007) +
-  geom_point(aes(x = pib_per_capita, y = expectativa_de_vida))
+  geom_point(
+    aes(x = pib_per_capita, y = expectativa_de_vida),
+    color = "orange"
+    )
 
 ```
 
@@ -316,10 +321,15 @@ A função `ggplot()`, a camada `data`, as variáveis através do `aes()` e a ca
 Abaixo temos o primeiro exemplo de gráfico:
 
 ```{r, echo = TRUE, collapse = TRUE, fig.align='center'}
+#| output-location: slide
+#| fig-align: center
 # Grafico de linhas
 dados_gapminder |> 
   filter(pais %in% c("Argentina", "Brasil", "Chile", "Uruguai")) |> 
   ggplot() +
-  geom_line(aes(x = ano, y = expectativa_de_vida, color = pais),
-            lwd = 1.5)
+  geom_line(
+    aes(x = ano, y = expectativa_de_vida, color = pais),
+    lwd = 1.5
+    ) + 
+  theme_minimal()
 ```
