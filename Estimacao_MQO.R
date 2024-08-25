@@ -79,6 +79,14 @@ residuo_df |>
 
 
 # Distribuicao dos residuos
+
+residuo_df |> 
+  ggplot() +
+  geom_histogram(
+    aes(x = residuo), color = "white"
+  ) +
+  xlim(-400, 400)
+
 residuo_df |> 
   ggplot() +
   geom_density(
