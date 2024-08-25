@@ -103,3 +103,4 @@ R2_alt <- cor(dados_gastos$food_exp, dados_gastos$income)^2
 
 
 
+
