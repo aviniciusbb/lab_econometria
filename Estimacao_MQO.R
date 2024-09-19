@@ -57,18 +57,18 @@ dados_gastos |>
   geom_point(
     aes(x = income, y = food_exp)
     ) +
-  geom_abline(
-    intercept = beta_0,
-    slope = beta_1,
-    lwd = 2,
-    color = "green"
-  )
+  # geom_abline(
+  #   intercept = beta_0,
+  #   slope = beta_1,
+  #   lwd = 2,
+  #   color = "green"
+  # )
 # Alternativamente
-  #geom_smooth(
-  #  aes(x = income, y = food_exp),
-  #  color = "blue",
-  #  method = lm, se = FALSE
-  #) 
+  geom_smooth(
+   aes(x = income, y = food_exp),
+   color = "blue",
+   method = lm, se = FALSE
+  )
 
 
 # Analise dos residuos 
