@@ -4,6 +4,7 @@
 
 
 # Carregar pacotes
+install.packages("tidyverse")
 library(tidyverse)
 
 # Modelo com variavies dummy -----
@@ -95,16 +96,12 @@ summary(reg_genero_educ_comp)
 
 # Analise por raca e educacao
 
-reg_raca_educ <- lm(salario ~ educ + negro, data = censo_pop)
-summary(reg_raca_educ)
-
 reg_raca_educ_comp <- lm(salario ~ educ + negro + educ:negro, data = censo_pop)
 summary(reg_raca_educ_comp)
 
 
 
 # Modelos nao-lineares -----
-
 
 # Ler dados (inserir caminho correto)
 censo_br <- read_csv("dados/censo_br.csv")
@@ -179,17 +176,25 @@ censo_br_2010 |>
   facet_wrap(~regiao)
 
 # Regiao nordeste
-modelo_ne <- lm(log(idhm) ~ log(rdpc), data = filter(censo_br_2010, regiao == "Nordeste"))
+modelo_ne <- lm(log(idhm) ~ log(rdpc), 
+                data = filter(censo_br_2010, regiao == "Nordeste"))
 summary(modelo_ne)
 
 # Regiao sul
-modelo_s <- lm(log(idhm) ~ log(rdpc), data = filter(censo_br_2010, regiao == "Sul"))
+modelo_s <- lm(log(idhm) ~ log(rdpc), 
+               data = filter(censo_br_2010, regiao == "Sul"))
 summary(modelo_s)
 
 # Regiao sudeste
-modelo_s <- lm(log(idhm) ~ log(rdpc), data = filter(censo_br_2010, regiao == "Sudeste"))
-summary(modelo_s)
+modelo_se <- lm(log(idhm) ~ log(rdpc), 
+                data = filter(censo_br_2010, regiao == "Sudeste"))
+summary(modelo_se)
 
+
+# Regiao norte
+modelo_n <- lm(log(idhm) ~ log(rdpc), 
+                data = filter(censo_br_2010, regiao == "Norte"))
+summary(modelo_n)
 
 
 
