@@ -10,7 +10,7 @@ library(broom)
 
 # Carregar dados
 # Inserir caminho correto do arquivo no seu computador
-censo_pop <- read_csv("dados/salarios.csv")
+censo_pop <- read_csv("~/Documents/lab_econometria/salarios.csv")
 
 # Analisar dados
 glimpse(censo_pop)

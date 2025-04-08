@@ -4,6 +4,7 @@
 
 
 # Carregar pacotes -----
+#install.packages("tidyverse")
 library(tidyverse)
 
 
@@ -12,7 +13,8 @@ library(tidyverse)
 # -------------------------------------- #
 
 # Abrir dados 
-dados_gastos <- read_csv("dados/dados_gastos.csv")
+dados_gastos <- read_csv("~/Documents/lab_econometria/dados_gastos.csv")
+View(dados_gastos)
 
 # Analisando os dados 
 glimpse(dados_gastos)
@@ -49,7 +51,7 @@ beta_0 <- mean(dados_gastos$food_exp) - beta_1 * mean(dados_gastos$income)
 # Estimacao do modelo de MQO
 modelo <- lm(food_exp ~ income, data = dados_gastos) 
 summary(modelo)
-modelo$residuals
+sum(modelo$residuals)
 
 # Adicionar reta de regressao 
 dados_gastos |> 
@@ -65,7 +67,6 @@ dados_gastos |>
 
 
 # Analise dos residuos 
-
 residuo_df <- data.frame(
   income = dados_gastos$income,
   residuo = modelo$residuals
