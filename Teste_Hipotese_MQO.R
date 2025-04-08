@@ -4,8 +4,6 @@
 
 
 # Carregar pacotes
-#install.packages("tidyverse")
-#install.packages("broom")
 library(tidyverse)
 library(broom)
 
@@ -17,59 +15,6 @@ censo_pop <- read_csv("dados/salarios.csv")
 # Analisar dados
 glimpse(censo_pop)
 
-
-# Estatisticas descritivas -----
-
-# Salario medio por genero
-censo_pop |> 
-  group_by(mulher) |> 
-  summarise(
-    salario_medio = mean(salario)
-  )
-
-# Salario medio por raca
-censo_pop |> 
-  group_by(negro) |> 
-  summarise(
-    salario_medio = mean(salario)
-  )
-
-
-# Visualizacao -----
-
-# Salario medio por genero
-censo_pop |> 
-  mutate(mulher = as.factor(mulher)) |> 
-  group_by(mulher) |> 
-  summarise(
-    salario_medio = mean(salario)
-  ) |> 
-  ggplot() +
-  geom_col(
-    aes(x =  mulher, y = salario_medio, fill = mulher)
-  ) +
-  scale_fill_manual(values = c("#00A5E0", "#EF9CDA")) +
-  xlab("Gênero") + ylab("Salário médio") +
-  ggtitle("Salário médio por gênero") +
-  theme_minimal()
-
-
-
-# Salario medio por raca
-censo_pop |> 
-  mutate(negro = as.factor(negro)) |> 
-  group_by(negro) |> 
-  summarise(
-    salario_medio = mean(salario)
-  ) |> 
-  ggplot() +
-  geom_col(
-    aes(x = negro, y = salario_medio, fill = negro)
-  ) +
-  scale_fill_manual(values = c("#EBEFBF", "#92828D")) +
-  xlab("Raça") + ylab("Salário médio") +
-  ggtitle("Salário médio por raca") +
-  theme_minimal()
 
 
 # Salario por nivel de educacao
@@ -133,7 +78,7 @@ confint(reg_linear)
 coef_sample <- vector(mode = "list")
 set.seed(12345)
 
-for (i in 1:1000){
+for (i in 1:10000){
   
   sample <- censo_pop |> 
     sample_n(200) 

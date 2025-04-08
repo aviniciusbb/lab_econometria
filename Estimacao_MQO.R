@@ -57,13 +57,6 @@ dados_gastos |>
   geom_point(
     aes(x = income, y = food_exp)
     ) +
-  # geom_abline(
-  #   intercept = beta_0,
-  #   slope = beta_1,
-  #   lwd = 2,
-  #   color = "green"
-  # )
-# Alternativamente
   geom_smooth(
    aes(x = income, y = food_exp),
    color = "blue",
@@ -113,16 +106,6 @@ residuo_df |>
 sum(residuo_df$residuo)
 mean(residuo_df$residuo)
 sd(residuo_df$residuo)
-
-
-# Coeficiente de determinacao R2 -----
-
-# R2 = 1 - (SQR/SQT)
-R2 <- 1 - sum(modelo$residuals^2) / 
-  sum((dados_gastos$food_exp - mean(dados_gastos$food_exp))^2)
-
-# R2 = quadrado do coeficiente correlacao
-R2_alt <- cor(dados_gastos$food_exp, dados_gastos$income)^2
 
 
 

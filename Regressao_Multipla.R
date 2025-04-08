@@ -8,7 +8,7 @@ library(tidyverse)
 # Ler dados
 
 aval_professor <- readr::read_csv(
-  "dados/aval_professor.csv.csv"
+  "dados/aval_professor.csv"
 )
 
 glimpse(aval_professor)
@@ -56,7 +56,7 @@ aval_professor |>
 aval_professor |> 
   ggplot() +
   geom_point(
-    aes(bty_avg, y = score),
+    aes(x = bty_avg, y = score),
     color = "purple"
   ) +
   theme_minimal()
@@ -88,7 +88,8 @@ aval_professor <- aval_professor |>
 
 
 # Adicionando o genero do professor
-mod_bty_genero <- lm(score ~ bty_avg + d_gender, data = aval_professor)
+mod_bty_genero <- lm(score ~ bty_avg + d_gender, 
+                     data = aval_professor)
 summary(mod_bty_genero)
 
 aval_professor |> 
@@ -119,8 +120,22 @@ aval_professor |>
 # Tenure track: em busca da titularidade
 # Teaching: professor assistente
 
-mod_bty_rank <- lm(score ~ bty_avg + rank, data = aval_professor)
+mod_bty_rank <- lm(score ~ bty_avg + rank, 
+                   data = aval_professor)
 summary(mod_bty_rank)
+
+
+aval_professor <- aval_professor |> 
+  dplyr::mutate(
+    d_teaching = if_else(rank == "teaching", 1, 0),
+    d_tenure_track = if_else(rank == "tenure track", 1, 0),
+    d_tenured = if_else(rank == "tenured", 1, 0)
+  )
+
+mod_bty_rank <- lm(score ~ bty_avg + d_teaching + d_tenured, 
+                   data = aval_professor)
+summary(mod_bty_rank)
+
 
 aval_professor |> 
   ggplot() +
@@ -174,6 +189,14 @@ seguro_saude |>
   geom_histogram(
     aes(x = expenses),
     color = "black", fill = "gray"
+  ) +
+  geom_vline(
+    xintercept = mean(seguro_saude$expenses),
+    color = "red", lwd = 2, lty = 2
+  ) +
+  geom_vline(
+    xintercept = median(seguro_saude$expenses),
+    color = "blue", lwd = 2, lty = 2
   ) +
   theme_minimal()
 
