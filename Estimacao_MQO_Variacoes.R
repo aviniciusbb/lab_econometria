@@ -10,23 +10,23 @@ library(tidyverse)
 # Modelo com variavies dummy -----
 
 # Carregar dados
-censo_pop <- read_csv("dados/salarios.csv")
+dados_salarios <- read_csv("dados/salarios.csv")
 
 # Analisar dados
-glimpse(censo_pop)
+glimpse(dados_salarios)
 
 
 # Estatisticas descritivas -----
 
 # Salario medio por genero
-censo_pop |> 
+dados_salarios |> 
   group_by(mulher) |> 
   summarise(
     salario_medio = mean(salario)
   )
 
 # Salario medio por raca
-censo_pop |> 
+dados_salarios |> 
   group_by(negro) |> 
   summarise(
     salario_medio = mean(salario)
@@ -36,7 +36,7 @@ censo_pop |>
 # Visualizacao -----
 
 # Salario medio por genero
-censo_pop |> 
+dados_salarios |> 
   mutate(mulher = as.factor(mulher)) |> 
   group_by(mulher) |> 
   summarise(
@@ -54,7 +54,7 @@ censo_pop |>
 
 
 # Salario medio por raca
-censo_pop |> 
+dados_salarios |> 
   mutate(negro = as.factor(negro)) |> 
   group_by(negro) |> 
   summarise(
@@ -74,12 +74,12 @@ censo_pop |>
 
 
 # Regressao - dummy de genero
-reg_genero <- lm(salario ~ mulher, data = censo_pop)
+reg_genero <- lm(salario ~ mulher, data = dados_salarios)
 summary(reg_genero)
 
 
 # Regressao - dummy de raca/cor
-reg_raca <- lm(salario ~ negro, data = censo_pop)
+reg_raca <- lm(salario ~ negro, data = dados_salarios)
 summary(reg_raca)
 
 
@@ -87,16 +87,16 @@ summary(reg_raca)
 
 # Analise por genero
 
-reg_genero_educ <- lm(salario ~ educ, data = censo_pop)
+reg_genero_educ <- lm(salario ~ educ, data = dados_salarios)
 summary(reg_genero_educ)
 
-reg_genero_educ_comp <- lm(salario ~ educ + mulher + educ:mulher, data = censo_pop)
+reg_genero_educ_comp <- lm(salario ~ educ + mulher + educ:mulher, data = dados_salarios)
 summary(reg_genero_educ_comp)
 
 
 # Analise por raca e educacao
 
-reg_raca_educ_comp <- lm(salario ~ educ + negro + educ:negro, data = censo_pop)
+reg_raca_educ_comp <- lm(salario ~ educ + negro + educ:negro, data = dados_salarios)
 summary(reg_raca_educ_comp)
 
 
