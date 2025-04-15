@@ -14,13 +14,13 @@ aval_professor <- readr::read_csv(
 glimpse(aval_professor)
 
 # Distribuicao de notas
- aval_professor |> 
-   ggplot() +
-   geom_histogram(
+aval_professor |> 
+  ggplot() +
+  geom_histogram(
     aes(x = score), binwidth = .215,
     color = "black", fill = "gray"
-   ) +
-   theme_minimal()
+  ) +
+  theme_minimal()
 
 
 # Relacao com outras variaveis
